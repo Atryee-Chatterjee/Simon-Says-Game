@@ -8,7 +8,7 @@ Test your memory, beat the timer, and try to reach a new high score!
 ---
 
 ## 🚀 Play Now  
-👉 [Live Demo](https://atryee-chatterjee.github.io/simon-says-game/)
+👉 [Live Demo](https://atryee-chatterjee.github.io/Simon-Says-Game/)
 
 ---
 
