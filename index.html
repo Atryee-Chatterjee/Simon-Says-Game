@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- External CSS and Fonts -->
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+    <title>Simon Says Game</title>
+</head>
+<body>
+    <!-- Whole game container -->
+    <div class="container">
+        <div class="page-container">
+    
+            <!-- All main content -->
+            <div class="content">
+
+                <!-- Score and High score -->
+                <div class="score-container">
+                    <div id="score">Score: 0</div>
+                    <div id="high-score">High Score: 0</div>
+                </div>
+                
+                <!-- Game heading with colourful letters -->
+                <h1 class="color-heading">
+                <span class="glow" style="color: red;">S</span>
+                <span class="glow" style="color: blue;">I</span>
+                <span class="glow" style="color: green;">M</span>
+                <span class="glow" style="color: yellow;">O</span>
+                <span class="glow" style="color: white;">N</span>
+                &nbsp;
+                <span class="glow" style="color: red;">S</span>
+                <span class="glow" style="color: blue;">A</span>
+                <span class="glow" style="color: green;">Y</span>
+                <span class="glow" style="color: yellow;">S</span>
+                </h1>
+            
+                <!-- Level / Message Display -->
+                <h3 class="game-title" id="game-level">Press Start to Begin</h3>
+
+                <!-- Start Game Button -->
+                <button id="start-btn" class="start-button">Start Game</button><br>
+            
+                <!-- Simon Game Button Grid -->
+                <div class="btn-container">
+            
+                    <!-- First Line of Buttons -->
+                    <div class="line-one">
+                        <div class="btn red" type="button" id="red"></div>
+                        <div class="btn yellow" type="button" id="yellow"></div>
+                    </div>
+
+                    <!-- Second Line of Buttons -->
+                   <div class="line-two">
+                       <div class="btn green" type="button" id="green"></div>
+                       <div class="btn blue" type="button" id="blue"></div>
+                   </div>
+                   
+                   <!-- Center Circle -->
+                   <div class="center-circle">SIMON</div>
+                </div>
+
+                <!-- Turn Display Message -->
+                <div id="turn-display" class="turn-display">Waiting...</div>
+    
+                <!-- Timer Display -->
+                <div id="timer-display" class="turn-display">Time Left: 45s</div>
+            
+        
+            </div>    
+        
+             <!-- Footer Section with External Links -->
+            <footer id="footer">
+                <a href="https://github.com/Atryee-Chatterjee"><button class="links">Git Repo</button></a>
+                <a href="https://www.youtube.com/watch?v=EWJ5uYwQJGU"> <button class="links">How To Play</button></a>
+                <a href="https://www.linkedin.com/in/atryee-chatterjee"><button class="links">LinkedIn</button></a>
+            </footer>
+        </div>
+    </div>
+
+    <!-- Script File -->
+    <script src="script.js"></script>
+</body>
+</html>

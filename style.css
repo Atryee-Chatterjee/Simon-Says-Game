@@ -1,0 +1,249 @@
+/* Base Styling for Body, Fonts, Colors and Layout */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+    text-align: center;
+    color: #fef2bf;
+    background-color: #121212;
+    margin: 0;
+    padding: 30px 0;
+    
+}
+
+/* Titles and Text Styling */
+.color-heading {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 2.5rem;
+  margin: 10px 0;
+}
+
+.game-title{
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1.5rem;
+    margin: 2%;
+    color: #fef2bf;
+}
+
+.turn-display {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.7rem;
+    margin: 15px 0;
+    color: #fef2bf;
+    padding: 10px 10px;
+    border: 2px dashed #fef2bf;
+    display: inline-block;
+}
+
+#timer-display {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 0.7rem;
+  margin-top: 2px;
+  color: #fef2bf;
+  padding: 10px 10px;
+  visibility: hidden;
+}
+
+/* Page Structure Using Flexbox */
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+/* Flexbox layout for full-height page */
+.page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+/* Allow content to grow */
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Score Display Box */
+.score-container {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 40px;
+  font-family: 'Press Start 2P', cursive;
+  color: #fef2bf;
+  font-size: 1rem;
+  z-index: 2;
+}
+
+#score, #high-score {
+    border: 2.5px solid #fef2bf;
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #fef2bf;
+}
+
+/* Start Button Styling*/
+.start-button {
+    color: #fef2bf;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.8rem;
+    padding: 10px 10px;
+    margin: 10px;
+    background-color: #121212;
+    border: 3px solid #fef2bf;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+.start-button:hover {
+    background-color: #fef2bf;
+    color: #121212;
+    transform: scale(1.05);
+    box-shadow: 0 0 10px #fef2bf;
+   
+}
+.start-button.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Button Grid Layout */
+.btn-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.line-one, .line-two{
+    display: flex;
+}
+
+
+/* Individual Color Buttons */
+.btn{
+    height: 150px;
+    width: 150px;
+    border: 6px solid black;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.2s ease;
+}
+
+/* Button Colors and Rounded Corners */
+.red{
+    background-color:red ;
+    border-top-left-radius: 100% 100%;
+}
+
+.yellow{
+    background-color: rgb(243, 243, 12);
+    border-top-right-radius: 100% 100%;
+}
+.green{
+    background-color: green;
+    border-bottom-left-radius: 100% 100%;
+}
+
+.blue{
+    background-color: blue;
+    border-bottom-right-radius: 100% 100%;
+}
+
+/* Hover Effects for Buttons */
+.red:hover {
+    box-shadow: 0 0 25px 8px rgba(255, 0, 0, 0.7);
+}
+
+.yellow:hover {
+    box-shadow: 0 0 25px 8px rgba(255, 255, 0, 0.7);
+}
+
+.green:hover {
+    box-shadow: 0 0 25px 8px rgba(0, 255, 0, 0.7);
+}
+
+.blue:hover {
+    box-shadow: 0 0 25px 8px rgba(0, 0, 255, 0.7);
+}
+
+/* Disable hover effect */
+.btn.no-hover:hover {
+    box-shadow: none !important;
+}
+
+
+
+/* Button animation effect */
+.flash{
+    filter: brightness(250%);
+    transform: scale(1.2); /* Makes the button bigger */
+    transition: transform 0.2s, filter 0.2s;
+}
+.userflash{
+    filter: brightness(150%);
+    transform: scale(1.2); /* Makes the button bigger */
+    transition: transform 0.2s, filter 0.2s;
+}
+
+/* Center black circle */
+.center-circle {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: black;
+    color: #fef2bf;
+    border-radius: 50%;
+    font-size: 1.1rem;
+    font-family: 'Press Start 2P', cursive;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* Footer section */
+#footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 5px 0;
+  background-color: #121212;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Footer Button style */
+.links {
+  height: 35px;
+  width: 150px;
+  background-color: #fff6cc;
+  border: none;
+  padding: 4px 18px 0px 20px;
+  border-radius: 20px;
+  font-family: "Press Start 2P";
+  font-size: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  box-shadow: 0 0 10px #fef2bf;
+  margin-bottom: 20px;
+}
+
+
